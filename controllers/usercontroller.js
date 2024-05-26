@@ -26,7 +26,7 @@ class UserController {
                 name,
                 password: hashPassword
             }
-            const result = await User.create(dataUser)
+            await User.create(dataUser)
             res.status(201).json({ message: "berhasil diinput" })
         } catch (error) {
             // console.log(error, "==> line 25");
